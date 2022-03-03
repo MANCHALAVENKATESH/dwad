@@ -1,0 +1,16 @@
+<div ng-repeat="item in items">
+  <p>{{item}}</p>
+  <ul>
+    <li ng-repeat="i in item.items">{{i}}</li>
+  </ul>
+</div>
+
+
+var app = angular.module('plunker', []);
+  app.controller('MainCtrl', function($scope) {
+    $scope.items = [
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9]
+    ]
+  });
